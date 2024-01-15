@@ -14,33 +14,24 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header class="cabecalho">
-        <nav class="cabecalho_menu">
-            <li><a class="cabecalho_menu_link"href="Login.html">Login</a></li>
-            <li><a class="cabecalho_menu_link"href="index_note.html">Home</a></li>
-            <li><a class="cabecalho_menu_link"href="notas.html">NOTAS</a> </li>
-            <li><a class="cabecalho_menu_link"href="relogio.html">Horario mundi</a></li>
-        </nav>
-    </header>
     <div class="container">
         <div class="container_login">
             <div class="wrap_login">
-                <form class="login_form">
+                <form class="login_form" action="testlogin.php" method="post">
                     <span class="login_form_title">
                         Realize o Login
                     </span>
                     
                     <div class="wrap_input margin_top_35 margin_bottom_35">
-                    <input class="input_form" type="email" name="email" autocomplete="off"/> 
-                    <span class="focus_input_form" data-placeholder="E-mail"></span>
+                    <input placeholder="digite seu email" class="input_form" type="email" name="email" autocomplete="off" required/>
                     </div>
 
                     <div class="wrap_input margin_bottom_35">
-                        <input class="input_form" type="password" name="password"/> 
-                        <span class="focus_input_form" data-placeholder="Senha"></span>
+                        <input placeholder="digite sua senha " class="input_form" type="password" name="senha" required/>
                         </div>
                         <div class="container_login_form_btn">
-                            <button class="login_form_btn">Login</button>
+                            <input class="login_form_btn" type="submit" name="submit" value="enviar">
+                            </form>
                             </div>
 
                             <ul class="login_utils">
@@ -60,7 +51,7 @@
                         
                 </form>
             </div>
-            <img src="/imagens/Tablet login-pana.png"alt="Login"width="300" height="300" class="margin_left_50"/>
+            <img src="imagens/Tablet_login-pana.png"alt="Login"width="300" height="300" class="margin_left_50"/>
         </div>
 
     </div>

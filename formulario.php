@@ -32,7 +32,8 @@ if (isset($_POST['firstname']))
 
     //$result =mysqli_query($conexao,$sql);
     $result = $conexao->query($sql);
-   
+    header('Location: login.php');
+
  }
 
 ?>
@@ -47,14 +48,6 @@ if (isset($_POST['firstname']))
 
 <body class="formulario_body">
     <form action="formulario.php" method="POST">
-    <header class="cabecalho">
-        <nav class="cabecalho_menu">
-            <li><a class="cabecalho_menu_link"href="Login.html">Login</a></li>
-            <li><a class="cabecalho_menu_link"href="index_note.html">Home</a></li>
-            <li><a class="cabecalho_menu_link"href="notas.html">NOTAS</a> </li>
-            <li><a class="cabecalho_menu_link"href="relogio.html">Horario mundi</a></li>
-        </nav>
-    </header>
     <div class="container_1">
         <div class="form_image">
             <img src="imagens/Mobile_login-pana.png" alt="">
@@ -64,6 +57,7 @@ if (isset($_POST['firstname']))
                 <div class="form_header">
                     <div class="title">
                         <h1>Cadastre-se</h1>
+                        <form id="forma"></form>
                     </div>
                     <div class="login_buttom">
                         <button><a href="#">Entrar</a></button>
@@ -137,4 +131,14 @@ if (isset($_POST['firstname']))
     </div>
     
 </body>
+<script>
+    
+    function logar(){
+        
+    }
+
+</script>
+
+
+
 </html>
