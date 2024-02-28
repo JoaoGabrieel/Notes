@@ -1,24 +1,14 @@
 <?php
 
 $dbHost = 'localhost';
-$dbUsername ='root';
+$dbUsername = 'root';
 $dbPassword = 'Batatinha123,456';
-$dbName ='formulario';
+$dbName = 'notas';
 
 
-$conexao = new mysqli($dbHost,$dbUsername,$dbPassword, $dbName);
-
-if ($conexao->connect_error) {
-
-    echo "Erro";
+try {
+    $pdo = new PDO("mysql:host=" . $dbHost . ";dbname=" . $dbName, $dbUsername, $dbPassword);
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+} catch (PDOException $erro) {
+    echo ('erro: ' . $erro->getMessage());
 }
-
-else {
-    echo "conexao efetuada com sucesso";
-}
-
-
-
-
-
-?>
